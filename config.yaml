@@ -1,9 +1,30 @@
-/*
-* @File : config.yaml
-* @Describe :
-* @Author: Jerry Yang
-* @Date : 2022/3/26 23:18
-* @Software: GoLand
- */
+name: "myCLDServer"
+mode: "release"
+port: 8084
+version: "v0.0.1"
+start_time: "2022-04-01"
+machine_id: 1
 
-package go_dlc_project
+auth:
+  jwt_expire: 8760
+
+log:
+  level: "info"
+  filename: "web_app.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: 10.3.138.59
+  port: 3306
+  user: "root"
+  password: "123456"
+  dbname: "game_active_stories"
+  max_open_conns: 200
+  max_idle_conns: 50
+redis:
+  host: 10.3.138.107
+  port: 6380
+  password: ""
+  db: 0
+  pool_size: 100
